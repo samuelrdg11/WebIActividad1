@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Segundo Corte</title>
+</head>
+
+<body>
+    <h2> ACTIVIDAD 1</h2>
+    <p><i><small>ALGORITMOS DE PRÁCTICA - SAMUEL RODRÍGUEZ </small></i></p>
+
+    <script>
+        let nums = parseInt(prompt("Ingrese un número entero para hallar su sumatoria: "))
+        let sum = 0
+        let i = 1
+        for (i; i <= nums; i++) {
+            sum = sum + i
+        }
+        document.write("<b>La sumatoria del</b> " + nums + " <b>es:</b> " + sum)
+
+        document.write("<hr>")
+
+        let numf = parseInt(prompt("Ingrese un número para la operación de la serie de Fibonacci: "))
+        let fib = 0
+        let aux = 1
+        let ifi = 1
+        document.write("<b> La serie de Fibonacci es: </b> ")
+        if (numf > 0) {
+            for (ifi; ifi <= numf; ifi++) {
+                document.write("[" + fib + "]")
+                aux += fib
+                fib = aux - fib
+
+            }
+        } else {
+            document.write("El número debe ser mayor a cero")
+        }
+
+        document.write("<hr>")
+
+        let nump = parseInt(prompt("Ingrese un numero para la operación de los números primos: "))
+
+        let ipri = 2
+        document.write("<b> Los números primos son: </b> ")
+        for (ipri; ipri <= nump; ipri++) {
+            let creciente = 2
+            var EsPrimo = Boolean(true)
+            while (EsPrimo && creciente < ipri) {
+                if (ipri % creciente == 0) {
+                    EsPrimo = false;
+                }
+                else {
+                    creciente++
+                }
+            }
+            if (EsPrimo) {
+                document.write("[" + ipri + "]")
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
